@@ -29,8 +29,12 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
 .brand strong {
@@ -45,6 +49,7 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
 .menu-button { display: none; }
 
 .hero {
+  scroll-margin-top: 88px;
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr);
@@ -196,18 +201,11 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
 .section-wave path { fill: none; stroke: var(--accent); stroke-width: 3; vector-effect: non-scaling-stroke; }
 
 .section {
+  scroll-margin-top: 88px;
   padding: 9vw 8vw;
 }
 .research-section { padding-top: 5vw; padding-bottom: 4vw; }
 .section-intro { width: min(100%, 920px); margin: 0 auto 5vw; text-align: center; }
-.section-intro::after {
-  content: "";
-  display: block;
-  width: 5.5rem;
-  height: 2px;
-  margin: 1.6rem auto 0;
-  background: rgba(255, 91, 53, .85);
-}
 .section h2 {
   margin: 0; font: 400 clamp(2.7rem, 5vw, 5.8rem)/.95 var(--serif); letter-spacing: -.045em;
 }
@@ -790,7 +788,7 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
   line-height: .98;
 }
 .playlists-section .section-intro {
-  margin-bottom: clamp(2rem, 3vw, 3.25rem);
+  margin-bottom: clamp(2.35rem, 3.4vw, 3.7rem);
 }
 .playlists-section .section-intro h2 span { color: var(--accent); }
 .playlist-browse-note {
@@ -919,8 +917,10 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--paper); padding: 2rem 5vw; flex-direction: column; align-items: flex-start; border-bottom: 1px solid var(--ink); }
   nav.open { display: flex; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding: 12vw 6vw 8vw; }
-  .hero h1,
-  .hero-tagline { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero,
+  .section { scroll-margin-top: 72px; }
+  .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero-tagline { font-size: clamp(2.15rem, 8.5vw, 3.45rem); }
   .profile-icons,
   .hero-actions { transform: none; }
   .profile-icon { width: min(100%, 9.25rem); }
@@ -938,7 +938,6 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   .playlists-section { padding-top: 12vw; }
   .playlist-notes { display: none; }
   .section-intro { width: 100%; margin-left: 0; }
-  .section-intro::after { width: 3.25rem; margin-top: 1.25rem; }
   .split-section { grid-template-columns: 1fr; }
   .publication { padding: 2.5rem 0; }
   .publication-body { margin-left: 0; }

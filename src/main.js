@@ -118,15 +118,12 @@ const projects = [
 const projectGrid = document.querySelector("#project-grid");
 projectGrid.innerHTML = projects.map((project) => `
   <article class="publication">
-    <div class="publication-meta">
+    <div class="publication-body">
       <div class="category-list">
         ${project.categories.map((category) => `<span class="category category-${category.toLowerCase().replace(/\s+/g, "-")}">${category}</span>`).join("")}
       </div>
-      <span class="publication-year">${project.year}</span>
-    </div>
-    <div class="publication-body">
       <h3>${project.title}</h3>
-      <p class="publication-authors">${project.authors.replaceAll("†", '<span class="student-symbol" aria-label="undergraduate student collaborator">†</span>')}</p>
+      <p class="publication-authors">${project.authors.replaceAll("†", '<span class="student-symbol" aria-label="undergraduate student collaborator">†</span>')} <span class="publication-year">(${project.year})</span></p>
       <p class="publication-venue"><em>${project.journal}</em>, ${project.citation}</p>
       <div class="publication-links">
         ${project.links.map((link) => `<a href="${link.href}" target="_blank" rel="noreferrer"><span class="pill-dot" aria-hidden="true"></span>${link.label}</a>`).join("")}
@@ -160,4 +157,60 @@ menuButton.addEventListener("click", () => {
 nav.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", "false");
   nav.classList.remove("open");
+});
+
+const galleryFeatureImage = document.querySelector("#gallery-feature-image");
+const galleryCaption = document.querySelector("#gallery-caption");
+const galleryThumbs = document.querySelectorAll(".gallery-thumb");
+const galleryPrev = document.querySelector(".gallery-arrow-prev");
+const galleryNext = document.querySelector(".gallery-arrow-next");
+
+const setGalleryImage = (index) => {
+  const thumb = galleryThumbs[index];
+  if (!thumb) return;
+
+  galleryFeatureImage.src = thumb.dataset.gallerySrc;
+  galleryFeatureImage.alt = thumb.dataset.galleryAlt;
+  galleryCaption.textContent = thumb.dataset.galleryCaption;
+
+  galleryThumbs.forEach((item) => {
+    item.classList.remove("is-active");
+    item.removeAttribute("aria-current");
+  });
+
+  thumb.classList.add("is-active");
+  thumb.setAttribute("aria-current", "true");
+};
+
+galleryThumbs.forEach((thumb, index) => {
+  thumb.addEventListener("click", () => setGalleryImage(index));
+});
+
+galleryPrev.addEventListener("click", () => {
+  const currentIndex = [...galleryThumbs].findIndex((thumb) => thumb.classList.contains("is-active"));
+  const previousIndex = (currentIndex - 1 + galleryThumbs.length) % galleryThumbs.length;
+  setGalleryImage(previousIndex);
+});
+
+galleryNext.addEventListener("click", () => {
+  const currentIndex = [...galleryThumbs].findIndex((thumb) => thumb.classList.contains("is-active"));
+  const nextIndex = (currentIndex + 1) % galleryThumbs.length;
+  setGalleryImage(nextIndex);
+});
+
+const instagramVideoEmbed = document.querySelector("#instagram-video-embed");
+const instagramVideoTabs = document.querySelectorAll(".instagram-video-tab");
+
+instagramVideoTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    instagramVideoEmbed.src = tab.dataset.instagramSrc;
+
+    instagramVideoTabs.forEach((item) => {
+      item.classList.remove("is-active");
+      item.removeAttribute("aria-current");
+    });
+
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-current", "true");
+  });
 });

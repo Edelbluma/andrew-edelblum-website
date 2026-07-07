@@ -7,7 +7,7 @@
     <title>Andrew Edelblum, Ph.D. — Marketing Scholar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Dancing+Script:wght@600&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
     <script defer src="src/main.js"></script>
   </head>
@@ -15,37 +15,94 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Andrew Edelblum, home">
-        <span>AE</span>
-        <strong>Andrew Edelblum</strong>
+        <strong><span>AE</span></strong>
       </a>
       <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
         <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#content">Content</a>
+        <a href="#playlists">Playlists</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <h1><span class="hero-greeting">Hi, I’m Andrew Edelblum.</span> I study how market actors respond to the ever-changing cultural, digital, and political world around us.</h1>
+          <h1><span class="hero-greeting">Hi, I’m Andrew Edelblum.</span><br />I study how market actors respond to the ever-changing cultural, digital, and political world around us.</h1>
+          <div class="profile-icons" aria-label="Profile links">
+            <a class="profile-icon profile-icon-linkedin" href="https://www.linkedin.com/in/andrew-edelblum/" target="_blank" rel="noreferrer" aria-label="Andrew Edelblum on LinkedIn">
+              <span class="profile-logo" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <rect class="linkedin-bg" x="3" y="3" width="26" height="26" rx="4" />
+                  <path class="linkedin-mark" d="M9.2 13.7h4.1V25H9.2zM11.25 7.4a2.38 2.38 0 1 1 0 4.76 2.38 2.38 0 0 1 0-4.76zM15.6 13.7h3.93v1.55c.57-.92 1.75-1.9 3.57-1.9 3.08 0 4.7 2 4.7 5.52V25h-4.12v-5.58c0-1.6-.53-2.52-1.85-2.52-1.43 0-2.1 1.03-2.1 2.52V25H15.6z" />
+                </svg>
+                <span>LinkedIn</span>
+              </span>
+            </a>
+            <a class="profile-icon profile-icon-instagram" href="https://www.instagram.com/prof_edelblum/" target="_blank" rel="noreferrer" aria-label="Andrew Edelblum on Instagram">
+              <span class="profile-logo" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <defs>
+                    <linearGradient id="instagram-gradient" x1="6" y1="28" x2="27" y2="5" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#feda75" />
+                      <stop offset=".28" stop-color="#fa7e1e" />
+                      <stop offset=".55" stop-color="#d62976" />
+                      <stop offset=".78" stop-color="#962fbf" />
+                      <stop offset="1" stop-color="#4f5bd5" />
+                    </linearGradient>
+                  </defs>
+                  <rect class="instagram-bg" x="3" y="3" width="26" height="26" rx="7" />
+                  <rect class="instagram-frame" x="8.5" y="8.5" width="15" height="15" rx="4.4" />
+                  <circle class="instagram-lens" cx="16" cy="16" r="4" />
+                  <circle class="instagram-dot" cx="21.2" cy="10.8" r="1.25" />
+                </svg>
+                <span>Instagram</span>
+              </span>
+            </a>
+              <a class="profile-icon profile-icon-scholar" href="https://scholar.google.com/citations?user=hsQ_hIIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer" aria-label="Andrew Edelblum on Google Scholar">
+                <span class="profile-logo" aria-hidden="true">
+                  <svg viewBox="0 0 36 36" focusable="false">
+                    <rect class="scholar-bg" x="3" y="3" width="30" height="30" rx="8" />
+                    <path class="scholar-cap" d="M8.5 15.2 18 9.7l9.5 5.5-9.5 5.6z" />
+                    <path class="scholar-cap" d="M12.4 18.8v4.3c1.7 1.55 3.56 2.32 5.6 2.32s3.9-.77 5.6-2.32v-4.3L18 22.1z" />
+                    <path class="scholar-cap" d="M27.3 15.8v6.9" />
+                </svg>
+                <span>Scholar</span>
+              </span>
+            </a>
+          </div>
           <div class="hero-bio">
             <p>My research examines how identity, morality, and social context shape consumer behavior in contemporary tech-mediated environments—especially how new platforms and sociopolitical dynamics influence the ways consumers form attitudes, evaluate brands, and interact online.</p>
             <p>My work has appeared in the <em>Journal of the Academy of Marketing Science</em>, <em>Psychology &amp; Marketing</em>, <em>European Journal of Marketing</em>, <em>Journal for the Association of Consumer Research</em>, <em>Industrial Marketing Management</em>, and other scholarly journals.</p>
             <p>I received my PhD in marketing from the University of Oregon and my BA in psychology from the College of New Jersey. Away from work, you’ll likely find me at a live show, barreling through a 7am run, playing Nintendo games, or scrolling further than any reasonable person should.</p>
           </div>
           <div class="hero-actions">
-            <a class="profile-pill" href="mailto:aedelblum1@udayton.edu">
-              <span class="pill-dot" aria-hidden="true"></span>Email
-            </a>
-            <a class="profile-pill" href="https://www.dropbox.com/scl/fi/dmeie0wqb10dpu6sp8hwu/Edelblum-CV.docx?rlkey=zel6lxqusnarake52zvxyr9sl&amp;st=lua8h8hb&amp;dl=0" target="_blank" rel="noreferrer">
-              <span class="pill-dot" aria-hidden="true"></span>CV
-            </a>
-            <a class="profile-pill" href="https://www.linkedin.com/in/andrew-edelblum/" target="_blank" rel="noreferrer">
-              <span class="pill-dot" aria-hidden="true"></span>LinkedIn
-            </a>
-            <a class="profile-pill" href="https://scholar.google.com/citations?user=hsQ_hIIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">
-              <span class="pill-dot" aria-hidden="true"></span>Google Scholar
-            </a>
+            <div class="hero-cta-stack">
+              <a class="contact-button cv-button" href="https://www.dropbox.com/scl/fi/dmeie0wqb10dpu6sp8hwu/Edelblum-CV.docx?rlkey=zel6lxqusnarake52zvxyr9sl&amp;st=lua8h8hb&amp;dl=0" target="_blank" rel="noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 28 32" focusable="false">
+                    <path d="M6 3.5h11l5 5v20H6z" />
+                    <path d="M17 3.5v6h5" />
+                    <path d="M10 15h8" />
+                    <path d="M10 20h8" />
+                    <path d="M10 25h5" />
+                  </svg>
+                </span>
+                <span>Read my CV</span>
+              </a>
+              <a class="contact-button" href="mailto:aedelblum1@udayton.edu">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 24" focusable="false">
+                    <path d="M3 3.5h26v17H3z" />
+                    <path d="M4 4.5l12 9 12-9" />
+                    <path d="M4.5 20l9-8" />
+                    <path d="M27.5 20l-9-8" />
+                  </svg>
+                </span>
+                <span>Get in touch</span>
+              </a>
+            </div>
           </div>
         </div>
         <figure class="portrait-wrap">
@@ -64,10 +121,325 @@
       <section class="section research-section" id="research">
         <div class="section-intro">
           <h2>Research for understanding consumers in the <span>here and now</span>.</h2>
-          <p>Organized around three related areas: technology, digital media, and influence. Each publication links directly to the paper and, where available, its open materials and public coverage.</p>
+          <p>Organized around three related areas: <span class="category intro-category category-technology">technology</span>, <span class="category intro-category category-digital-media">digital media</span>, and <span class="category intro-category category-influence">influence</span>. Each publication links directly to the paper and, where available, its open materials and public coverage.</p>
           <p class="collaboration-note"><span aria-hidden="true">†</span> Denotes undergraduate student collaborators.</p>
         </div>
-        <div class="publication-list" id="project-grid"></div>
+        <div class="publications">
+          <p class="section-label publications-label">Publications</p>
+          <div class="publication-list" id="project-grid"></div>
+        </div>
+      </section>
+
+      <div class="section-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+          <path d="M0 20 C120 2 240 38 360 20 S600 2 720 20 S960 38 1080 20 S1320 2 1440 20" />
+        </svg>
+      </div>
+
+      <section class="section teaching-section" id="teaching">
+        <div class="section-intro">
+          <h2>Teaching students to turn <span>curiosity into confidence</span>.</h2>
+          <p>My classroom connects marketing ideas to the cultural and digital worlds students already inhabit, giving them practical ways to ask sharper questions, work thoughtfully with evidence, and communicate what they discover.<br /><span class="teaching-client-note">For relevant courses, clients for semester-long projects are listed below, with links to each organization’s website.</span></p>
+        </div>
+
+        <p class="client-logo-label">Selected Class Clients</p>
+        <div class="client-logo-strip" aria-label="Selected class clients">
+          <div class="client-logo client-logo-brooks">
+            <img src="assets/brooks-running.jpg" alt="Brooks Running" />
+          </div>
+          <div class="client-logo client-logo-miami">
+            <img src="assets/miami-valley-school.jpg" alt="The Miami Valley School" />
+          </div>
+          <div class="client-logo client-logo-branch">
+            <img src="assets/branch-and-bone.webp" alt="Branch and Bone Artisan Ales" />
+          </div>
+          <div class="client-logo client-logo-oatra">
+            <img src="assets/oatra-wordmark.png" alt="Oatra" />
+          </div>
+          <div class="client-logo client-logo-carillon">
+            <img src="assets/carillon-historical-park.avif" alt="Carillon Historical Park" />
+          </div>
+        </div>
+
+        <div class="courses">
+          <p class="section-label courses-label">Courses taught</p>
+          <div class="course-grid">
+            <article class="course-card">
+              <span>01</span>
+              <div>
+                <h3>Marketing Research</h3>
+                <p>Turning business questions into thoughtful research designs, meaningful evidence, and clear recommendations.</p>
+                <details class="course-clients">
+                  <summary>Clients <span class="abstract-arrow" aria-hidden="true">⌄</span></summary>
+                  <ul>
+                    <li><span>Spring 2026</span>: <a href="https://daytonhistory.org/?gad_source=1&amp;gad_campaignid=23776250559&amp;gclid=CjwKCAjwpK3SBhASEiwAtV1SPN0LbWOcYhvRQ4mR2rpARPJ-F2P_A7j-bHMQtjiFuygiAjeUaTmh-xoCx9sQAvD_BwE" target="_blank" rel="noreferrer">Carillon Historical Park</a> — Dayton history and heritage museum.</li>
+                    <li><span>Fall 2025</span>: <a href="https://www.miamivalleyschool.org/admissions/admissions-process?gad_source=1&amp;gad_campaignid=21470968683&amp;gclid=CjwKCAjwpK3SBhASEiwAtV1SPCjirXnEDwkVF0abGaeYG7-Hp1HFTu8L9Q_a_OUey-LC6-eSRZQLERoCcukQAvD_BwE" target="_blank" rel="noreferrer">Miami Valley School</a> — Independent school in Dayton.</li>
+                    <li><span>Spring 2025</span>: <a href="https://www.branchandboneales.com/" target="_blank" rel="noreferrer">Branch &amp; Bone</a> — Dayton craft brewery and taproom.</li>
+                    <li><span>Fall 2024</span>: <a href="https://www.iichange.com/" target="_blank" rel="noreferrer">iiChange</a> — Organizational change consultancy.</li>
+                    <li><span>Spring 2024</span>: <a href="https://www.aworldafair.org/difi" target="_blank" rel="noreferrer">Dayton International Festival, Inc.</a> — Organizer of Dayton’s multicultural festival.</li>
+                    <li><span>Fall 2023</span>: <a href="https://www.moellerbrewbarn.com/" target="_blank" rel="noreferrer">Moeller Brew Barn</a> — Ohio craft brewery and taproom.</li>
+                    <li><span>Spring 2023</span>: <a href="https://www.runnersplus.com/?gad_source=1&amp;gad_campaignid=22046347574&amp;gclid=CjwKCAjwpK3SBhASEiwAtV1SPGD85Z7JYX3R_tISuOgVuR51zGYl0izlHQuMHJkUNySmAw2ADG_NjhoCfZsQAvD_BwE" target="_blank" rel="noreferrer">Runners Plus</a> — Specialty running retailer.</li>
+                    <li><span>Fall 2022</span>: <a href="https://saversystems.com/?srsltid=AfmBOopAUB-YQ5PCkTxwaORDcyJygG10mCFNzaKKAg6abvoZaMZVahDW" target="_blank" rel="noreferrer">SaverSystems</a> — Wood and masonry care manufacturer.</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+            <article class="course-card">
+              <span>02</span>
+              <div>
+                <h3>Social Media Marketing</h3>
+                <p>Examining how brands build communities, create engaging content, and make strategic decisions across platforms.</p>
+                <details class="course-clients">
+                  <summary>Clients <span class="abstract-arrow" aria-hidden="true">⌄</span></summary>
+                  <ul>
+                    <li><span>Fall 2025</span>: <a href="https://www.brooksrunning.com/en_us?srsltid=AfmBOorxxr-q9OOgfu-BgjrHWuqvbCuARbp8c3MmGWFH1j5WHOscd9VI" target="_blank" rel="noreferrer">Brooks Running</a> — Performance running footwear and apparel.</li>
+                    <li><span>Fall 2024</span>: <a href="https://oatra.co/" target="_blank" rel="noreferrer">Oatra</a> — Oat-based consumer food brand.</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+            <article class="course-card">
+              <span>03</span>
+              <div>
+                <h3>Independent Research</h3>
+                <p>Mentoring students through the process of developing and completing an original marketing research project.</p>
+                <p class="published-project-note"><span aria-hidden="true">✦</span> Denotes projects that have been published.</p>
+                <details class="course-clients course-projects">
+                  <summary>Projects <span class="abstract-arrow" aria-hidden="true">⌄</span></summary>
+                  <ul>
+                    <li><span>Spring 2026</span>: <strong>Audrey Brothers</strong> — Desired Media Length</li>
+                    <li><span>Spring 2026</span>: <strong>Quinn Herron</strong> — Digital Content Creation</li>
+                    <li><span>Spring 2026</span>: <strong>Ellie Milano</strong> — Cross-Cultural Consumer Minimalism</li>
+                    <li><span>Fall 2025</span>: <strong>Allison Feeney</strong> — Psychological Underpinnings of Hot Takes</li>
+                    <li><span>Fall 2025</span>: <strong>Jameson Maynes</strong> — Inferences of Brand Typography</li>
+                    <li><span>Spring 2025</span>: <strong>Joshua Poe</strong> — AI Music and Engagement <span class="published-project-symbol" aria-label="published project">✦</span></li>
+                    <li><span>Fall 2024</span>: <strong>Gabriella Mercado</strong> — AI Salience</li>
+                    <li><span>Fall 2024</span>: <strong>Abigail Smith</strong> — Pinterest as Constructive Social Media Use</li>
+                    <li><span>Fall 2023</span>: <strong>Justin Palmer</strong> — Fitfluencers and Attractiveness <span class="published-project-symbol" aria-label="published project">✦</span></li>
+                    <li><span>Spring 2023</span>: <strong>Jonah Farrar</strong> and <strong>Jacob Salzman</strong> — Historical Nostalgia</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+          <h3 class="section-label testimonials-label" id="testimonials-heading">Student Testimonials</h3>
+          <div class="testimonial-cloud">
+            <blockquote class="testimonial">I absolutely <strong>love all of the content</strong> and topics discussed in Andrew’s lectures and often find many of the theories discussed to be trends I notice and can see in play on an everyday basis!</blockquote>
+            <blockquote class="testimonial">Professor Edelblum takes pride in teaching. He <strong>truly cares</strong> about his students and wants them to succeed in the classroom.</blockquote>
+            <blockquote class="testimonial"><strong>Best professor</strong> I have ever had and stimulated my learning and interest in the class. Treated all students as adults, which I feel rarely happens in undergraduate classes.</blockquote>
+            <blockquote class="testimonial"><strong>Best professor ever!</strong> So grateful to have gotten the opportunity to learn from him, and I don't say this lightly.</blockquote>
+            <blockquote class="testimonial">Professor Edelblum is <strong>my favorite teacher</strong> I've had in three years. He was amazing. He made a three-hour class feel like an hour.</blockquote>
+            <blockquote class="testimonial">It's refreshing to see a professor actually <strong>in love with what they're teaching</strong> and show that. By far one of my favorite classes.</blockquote>
+            <blockquote class="testimonial">Professor Edelblum is the <strong>best professor</strong> I have had in my whole education. He deeply cares about his students, what we are up to, and how we are feeling every day.</blockquote>
+            <blockquote class="testimonial">He is the first professor I've had that can relate to students so much and <strong>make class fun</strong> while simultaneously effectively teaching us.</blockquote>
+            <blockquote class="testimonial"><strong>Your passion was unreal.</strong> It kept me energized, engaged, interested, and wanting to learn and try even harder. You are a top-class professor, and it’s people like you who make the world a better place.</blockquote>
+            <blockquote class="testimonial">There are not enough words to express <strong>how amazing</strong> this professor is. He is going to do great things. Every student he has will be grateful they took his class.</blockquote>
+            <blockquote class="testimonial">Prof. Edelblum created a space where everyone felt <strong>comfortable participating</strong> and went above and beyond to make sure we succeded. He truly cares so much about his students and I am so grateful and happy for the opportunity to take his course!</blockquote>
+          </div>
+        </section>
+
+        <h3 class="section-label gallery-label">Gallery</h3>
+        <div class="teaching-gallery" aria-label="Teaching and student research photos">
+          <figure class="gallery-photo gallery-feature">
+            <button class="gallery-arrow gallery-arrow-prev" type="button" aria-label="Show previous gallery photo">‹</button>
+            <img id="gallery-feature-image" src="assets/teaching-photo-classroom.jpg" alt="Andrew working with students around a classroom table" loading="lazy" decoding="async" />
+            <button class="gallery-arrow gallery-arrow-next" type="button" aria-label="Show next gallery photo">›</button>
+          </figure>
+          <p class="gallery-caption" id="gallery-caption">Walking some Marketing Research students through embedded data and A/B testing in Qualtrics. The usual!</p>
+          <div class="gallery-thumbnails" aria-label="Choose a teaching photo">
+            <button class="gallery-thumb is-active" type="button" aria-label="Show classroom collaboration photo" aria-current="true" data-gallery-src="assets/teaching-photo-classroom.jpg" data-gallery-alt="Andrew working with students around a classroom table" data-gallery-caption="Walking some Marketing Research students through embedded data and A/B testing in Qualtrics. The usual!">
+              <img src="assets/teaching-thumb-classroom.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show student poster presentation photo" data-gallery-src="assets/teaching-photo-posters.jpg" data-gallery-alt="Andrew with student researchers in front of poster presentations" data-gallery-caption="Three of my students shared their independent research at the University of Dayton's 2026 Stander Symposium. Pictured from left to right, Jameson Maynes (UD '26), Ellie Milano (UD '26), and Audrey Brothers (UD '26).">
+              <img src="assets/teaching-thumb-posters.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show student research team photo" data-gallery-src="assets/teaching-photo-students.jpg" data-gallery-alt="Andrew and students presenting research posters" data-gallery-caption="Attending the red carpet premiere of a documentary that my former students, Bridget Mary Flood (pictured left, UD '26) and Allison Feeney (pictured right, UD '26), had a major role in producing.">
+              <img src="assets/teaching-thumb-students.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show historical nostalgia research photo" data-gallery-src="assets/teaching-photo-01.jpg" data-gallery-alt="Teaching moment with student research poster" data-gallery-caption="Jonah Farrar (pictured left, UD '24) and Jacob Salzman (pictured right, UD '24) presenting our joint work in what was my first-ever advisory role. This is one of my favorite parts of the job.">
+              <img src="assets/teaching-thumb-01.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show student presentation photo" data-gallery-src="assets/teaching-photo-02.jpg" data-gallery-alt="Student research presentation moment" data-gallery-caption="This research coauthored by Justin Palmer (UD '24) would eventually get published a little over a year later.">
+              <img src="assets/teaching-thumb-02.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show marketing classroom activity photo" data-gallery-src="assets/teaching-photo-03.jpg" data-gallery-alt="Marketing classroom activity" data-gallery-caption="Halloween in the classroom (2024). We brought the BOOM!">
+              <img src="assets/teaching-thumb-03.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="gallery-thumb" type="button" aria-label="Show student research moment photo" data-gallery-src="assets/teaching-photo-04.jpg" data-gallery-alt="Student research moment" data-gallery-caption="Independent research advisee Abigail Smith (UD '25) on graduation day. It's always wonderful to celebrate with my students.">
+              <img src="assets/teaching-thumb-04.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+          <path d="M0 20 C120 2 240 38 360 20 S600 2 720 20 S960 38 1080 20 S1320 2 1440 20" />
+        </svg>
+      </div>
+
+      <section class="section content-section" id="content">
+        <div class="section-intro">
+          <h2>Marketing research, but make it <span>for everyone</span>.</h2>
+          <p>I create short-form videos that translate marketing research for a mass audience, offering accessible analysis of consumer psychology, branding, social media, and the pop culture moments people are already talking about.</p>
+        </div>
+
+        <p class="content-metrics-label">Metrics</p>
+        <div class="content-metrics" aria-label="Instagram content metrics">
+          <img class="content-cartoon" src="assets/cartoon-portrait.jpg" alt="" aria-hidden="true" />
+          <div class="metrics-copy">
+            <h3>Turning academic ideas into scroll-stopping analysis.</h3>
+            <p>Across explainers, trend breakdowns, and pop culture commentary, my videos connect research-backed consumer insight to the cultural moments shaping everyday conversation.</p>
+            <a class="content-profile-link" href="https://www.instagram.com/prof_edelblum/" target="_blank" rel="noreferrer">Visit @prof_edelblum</a>
+          </div>
+          <div class="metrics-grid">
+            <article class="metric-card metric-card-feature">
+              <span>8.8k</span>
+              <p>Followers</p>
+            </article>
+            <article class="metric-card">
+              <span>10M+</span>
+              <p>Total views</p>
+            </article>
+            <article class="metric-card">
+              <span>3.35M</span>
+              <p>Highest-viewed video</p>
+            </article>
+            <article class="metric-card">
+              <span>31</span>
+              <p>Videos posted</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="content-divider" aria-hidden="true"></div>
+
+        <h3 class="section-label sample-content-label">Sample Content</h3>
+        <div class="instagram-video-gallery" aria-label="Featured Instagram video gallery">
+          <div class="instagram-video-frame">
+            <iframe id="instagram-video-embed" src="https://www.instagram.com/p/DRknm_DkaBa/embed/" title="Featured Instagram video" loading="lazy" allowtransparency="true"></iframe>
+          </div>
+          <div class="instagram-video-tabs" aria-label="Choose a featured Instagram video">
+            <button class="instagram-video-tab is-active" type="button" aria-current="true" data-instagram-src="https://www.instagram.com/p/DRknm_DkaBa/embed/">
+              <span>01</span>
+              <p>Why Costco pumpkin pies are so cheap</p>
+            </button>
+            <button class="instagram-video-tab" type="button" data-instagram-src="https://www.instagram.com/p/DRzz-nLEZy7/embed/">
+              <span>02</span>
+              <p>Spotify Wrapped makes data harvesting fun</p>
+            </button>
+            <button class="instagram-video-tab" type="button" data-instagram-src="https://www.instagram.com/p/DToAU_lkVyc/embed/">
+              <span>03</span>
+              <p>Kai Cenat's reading revolution?</p>
+            </button>
+            <button class="instagram-video-tab" type="button" data-instagram-src="https://www.instagram.com/p/DU4JtI8Dcy9/embed/">
+              <span>04</span>
+              <p>Why we fell in love with a lonely monkey</p>
+            </button>
+            <button class="instagram-video-tab" type="button" data-instagram-src="https://www.instagram.com/p/DT6EL0qkUdu/embed/">
+              <span>05</span>
+              <p>“Dr. Pepper, baby” and the human side of digital</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+          <path d="M0 20 C120 2 240 38 360 20 S600 2 720 20 S960 38 1080 20 S1320 2 1440 20" />
+        </svg>
+      </div>
+
+      <section class="section playlists-section" id="playlists">
+        <div class="section-intro">
+          <h2>Every class gets a <span>soundtrack</span>.</h2>
+          <p>In each course I teach, students help crowdsource a shared Spotify playlist across the semester. Recommendations come up during class or appear as optional addendums to homework assignments, giving each class its own small archive of taste, memory, and personality.<br /><span class="playlist-browse-note">Browse all the class playlists below.</span></p>
+        </div>
+
+        <div class="playlist-notes" aria-hidden="true">
+          <span>♪</span>
+          <span>♫</span>
+          <span>♬</span>
+          <span>♩</span>
+          <span>♪</span>
+          <span>♬</span>
+          <span>♫</span>
+          <span>♪</span>
+          <span>♩</span>
+          <span>♬</span>
+          <span>♪</span>
+          <span>♫</span>
+        </div>
+
+        <div class="playlist-folders" aria-label="Class Spotify playlists by academic year">
+          <details class="playlist-folder" open>
+            <summary>
+              <span class="folder-icon" aria-hidden="true"></span>
+              <span class="folder-title">2025 – 2026</span>
+              <span class="folder-count">3 playlists</span>
+              <span class="folder-arrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="playlist-grid">
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Spring ’26</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/0pjGH0pf2rVHpVnVoy2OPn?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Fall ’25</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/64un3CB3UODbkU8aCR5bgJ?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+              <article class="playlist-card">
+                <h3>Social Media Marketing <span>Fall ’25</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/2QTuRrCUSnu6m2G8882S41?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+            </div>
+          </details>
+
+          <details class="playlist-folder">
+            <summary>
+              <span class="folder-icon" aria-hidden="true"></span>
+              <span class="folder-title">2024 – 2025</span>
+              <span class="folder-count">3 playlists</span>
+              <span class="folder-arrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="playlist-grid">
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Spring ’25</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/7q22RDm1sq5Q3MueuZ9nYF?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Fall ’24</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/6IfNo3YPsfEJIVkp3gWq3i?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+              <article class="playlist-card">
+                <h3>Social Media Marketing <span>Fall ’24</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/1vWKYbxfkjJncip9J3Rh5W?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+            </div>
+          </details>
+
+          <details class="playlist-folder">
+            <summary>
+              <span class="folder-icon" aria-hidden="true"></span>
+              <span class="folder-title">2023 – 2024</span>
+              <span class="folder-count">2 playlists</span>
+              <span class="folder-arrow" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="playlist-grid">
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Spring ’24</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/3CKFAfH3D2whIJNNJK2hJm?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+              <article class="playlist-card">
+                <h3>Marketing Research <span>Fall ’23</span></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/4icvpMH18nHfWufKqIi4hJ?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </article>
+            </div>
+          </details>
+        </div>
       </section>
     </main>
   </body>

@@ -53,10 +53,13 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
   padding: 5vw 8vw 3.5vw;
 }
 .eyebrow { font: 500 .72rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: .1em; }
-.hero h1 {
-  max-width: 900px; margin: 0 0 1.6rem; font: 400 clamp(2.35rem, 4vw, 4.8rem)/.98 var(--serif);
+.hero h1,
+.hero-tagline {
+  max-width: 900px; font: 400 clamp(2.35rem, 4vw, 4.8rem)/.98 var(--serif);
   letter-spacing: -.055em;
 }
+.hero h1 { margin: 0; }
+.hero-tagline { margin: 0 0 1.6rem; }
 .hero-greeting { color: var(--accent); }
 .hero-bio { max-width: 720px; margin: 1.6rem 0 0; font-size: 1rem; line-height: 1.72; color: color-mix(in srgb, var(--ink) 80%, transparent); }
 .hero-bio p { margin: 0 0 .8rem; }
@@ -184,6 +187,7 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
   stroke-linejoin: round;
 }
 .portrait-wrap { margin: 0; position: relative; justify-self: end; max-width: 430px; }
+.portrait-mobile { display: none; }
 .portrait-wrap img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(.82) contrast(1.04); position: relative; z-index: 2; }
 .portrait-accent { position: absolute; inset: -18px 22px 45px -18px; background: var(--accent); transform: rotate(-3deg); }
 .portrait-wrap figcaption { position: relative; z-index: 3; width: 80%; margin: -28px 0 0 auto; background: var(--surface); padding: 1rem; font: .7rem/1.5 var(--mono); text-transform: uppercase; }
@@ -191,9 +195,19 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
 .section-wave svg { display: block; width: 100%; height: 100%; }
 .section-wave path { fill: none; stroke: var(--accent); stroke-width: 3; vector-effect: non-scaling-stroke; }
 
-.section { padding: 9vw 8vw; }
+.section {
+  padding: 9vw 8vw;
+}
 .research-section { padding-top: 5vw; padding-bottom: 4vw; }
 .section-intro { width: min(100%, 920px); margin: 0 auto 5vw; text-align: center; }
+.section-intro::after {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 2px;
+  margin: 1.6rem auto 0;
+  background: rgba(255, 91, 53, .85);
+}
 .section h2 {
   margin: 0; font: 400 clamp(2.7rem, 5vw, 5.8rem)/.95 var(--serif); letter-spacing: -.045em;
 }
@@ -674,8 +688,7 @@ nav a { font-size: .82rem; font-weight: 600; text-decoration: none; }
   padding-top: 5vw;
   overflow: hidden;
 }
-.playlists-section::before,
-.playlists-section::after {
+.playlists-section::before {
   content: none;
 }
 .playlist-notes {
@@ -906,11 +919,18 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--paper); padding: 2rem 5vw; flex-direction: column; align-items: flex-start; border-bottom: 1px solid var(--ink); }
   nav.open { display: flex; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding: 12vw 6vw 8vw; }
-  .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero h1,
+  .hero-tagline { font-size: clamp(2.5rem, 10vw, 4rem); }
   .profile-icons,
   .hero-actions { transform: none; }
   .profile-icon { width: min(100%, 9.25rem); }
-  .portrait-wrap { width: 82%; justify-self: center; margin-top: 3rem; }
+  .portrait-desktop { display: none; }
+  .portrait-mobile {
+    display: block;
+    width: min(82%, 22rem);
+    justify-self: center;
+    margin: 1.9rem auto 2.2rem;
+  }
   .section { padding: 20vw 6vw; }
   .research-section { padding-top: 12vw; padding-bottom: 10vw; }
   .teaching-section { padding-top: 12vw; }
@@ -918,6 +938,7 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   .playlists-section { padding-top: 12vw; }
   .playlist-notes { display: none; }
   .section-intro { width: 100%; margin-left: 0; }
+  .section-intro::after { width: 3.25rem; margin-top: 1.25rem; }
   .split-section { grid-template-columns: 1fr; }
   .publication { padding: 2.5rem 0; }
   .publication-body { margin-left: 0; }
@@ -936,10 +957,18 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
     flex: 0 0 clamp(5rem, 22vw, 7rem);
     scroll-snap-align: start;
   }
-  .content-metrics { grid-template-columns: 1fr; padding: 1rem; }
+  .content-section .section-intro {
+    margin-bottom: clamp(3.5rem, 12vw, 5rem);
+  }
+  .content-metrics {
+    grid-template-columns: 1fr;
+    margin-top: clamp(1rem, 5vw, 2rem);
+    padding: clamp(4.25rem, 18vw, 5.5rem) 1rem 1rem;
+  }
   .content-cartoon {
-    top: -1.6rem;
-    width: clamp(5.5rem, 24vw, 7rem);
+    top: clamp(-2.6rem, -8vw, -1.9rem);
+    right: 1rem;
+    width: clamp(4.9rem, 20vw, 6.1rem);
     border-width: 3px;
   }
   .metric-card {

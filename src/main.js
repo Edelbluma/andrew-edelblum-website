@@ -161,6 +161,7 @@ nav.addEventListener("click", () => {
 
 const galleryFeatureImage = document.querySelector("#gallery-feature-image");
 const galleryCaption = document.querySelector("#gallery-caption");
+const galleryCaptionText = galleryCaption.querySelector(".gallery-caption-text");
 const galleryThumbs = document.querySelectorAll(".gallery-thumb");
 const galleryPrev = document.querySelector(".gallery-arrow-prev");
 const galleryNext = document.querySelector(".gallery-arrow-next");
@@ -171,7 +172,9 @@ const setGalleryImage = (index) => {
 
   galleryFeatureImage.src = thumb.dataset.gallerySrc;
   galleryFeatureImage.alt = thumb.dataset.galleryAlt;
-  galleryCaption.textContent = thumb.dataset.galleryCaption;
+  galleryCaptionText.textContent = thumb.dataset.galleryCaption;
+  galleryCaption.classList.remove("is-expanded");
+  galleryCaption.setAttribute("aria-expanded", "false");
 
   galleryThumbs.forEach((item) => {
     item.classList.remove("is-active");
@@ -184,6 +187,11 @@ const setGalleryImage = (index) => {
 
 galleryThumbs.forEach((thumb, index) => {
   thumb.addEventListener("click", () => setGalleryImage(index));
+});
+
+galleryCaption.addEventListener("click", () => {
+  const expanded = galleryCaption.classList.toggle("is-expanded");
+  galleryCaption.setAttribute("aria-expanded", String(expanded));
 });
 
 galleryPrev.addEventListener("click", () => {
@@ -214,3 +222,39 @@ instagramVideoTabs.forEach((tab) => {
     tab.setAttribute("aria-current", "true");
   });
 });
+
+const testimonialTrack = document.querySelector(".testimonial-cloud");
+const testimonialCards = testimonialTrack ? [...testimonialTrack.querySelectorAll(".testimonial")] : [];
+const mobileTestimonials = window.matchMedia("(max-width: 850px)");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+let testimonialTimer;
+const startTestimonialAutoScroll = () => {
+  if (!testimonialTrack || testimonialCards.length < 2 || !mobileTestimonials.matches || reducedMotion.matches) return;
+
+  window.clearInterval(testimonialTimer);
+  testimonialTimer = window.setInterval(() => {
+    const currentIndex = testimonialCards.reduce((closestIndex, card, index) => {
+      const closestDistance = Math.abs(testimonialCards[closestIndex].offsetLeft - testimonialTrack.scrollLeft);
+      const cardDistance = Math.abs(card.offsetLeft - testimonialTrack.scrollLeft);
+      return cardDistance < closestDistance ? index : closestIndex;
+    }, 0);
+    const nextIndex = (currentIndex + 1) % testimonialCards.length;
+
+    testimonialTrack.scrollTo({
+      left: testimonialCards[nextIndex].offsetLeft,
+      behavior: "smooth"
+    });
+  }, 5200);
+};
+
+const stopTestimonialAutoScroll = () => window.clearInterval(testimonialTimer);
+
+if (testimonialTrack) {
+  startTestimonialAutoScroll();
+  testimonialTrack.addEventListener("pointerdown", stopTestimonialAutoScroll);
+  mobileTestimonials.addEventListener("change", () => {
+    stopTestimonialAutoScroll();
+    startTestimonialAutoScroll();
+  });
+}

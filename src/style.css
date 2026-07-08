@@ -977,11 +977,11 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   .playlist-notes span:nth-child(10) { top: 86%; left: 22%; transform: rotate(-20deg); }
   .section-intro { width: 100%; margin-left: 0; }
   .teaching-section .client-logo-label {
-    margin-top: clamp(1.35rem, 5.5vw, 2.3rem);
+    margin-top: clamp(2.1rem, 8vw, 3.25rem);
     margin-bottom: .95rem;
   }
   .client-logo-strip {
-    width: min(100%, 25rem);
+    width: min(92%, 22rem);
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: clamp(.55rem, 2.4vw, .85rem);
     margin-bottom: clamp(3.2rem, 12vw, 4.5rem);

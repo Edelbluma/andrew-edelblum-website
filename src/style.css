@@ -977,7 +977,7 @@ body.night { --ink: #eeece6; --paper: #171717; --surface: #272727; --line: rgba(
   .playlist-notes span:nth-child(10) { top: 86%; left: 22%; transform: rotate(-20deg); }
   .section-intro { width: 100%; margin-left: 0; }
   .teaching-section .client-logo-label {
-    margin-top: clamp(2.1rem, 8vw, 3.25rem);
+    margin-top: clamp(2.75rem, 10vw, 4rem);
     margin-bottom: .95rem;
   }
   .client-logo-strip {
